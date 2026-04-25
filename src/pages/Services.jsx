@@ -1,8 +1,11 @@
 import React from 'react'
 import {ServicesList} from './ServicesList'
+import Navbar from './Navbar'
 const Services = () => {
   return (
-    <div className='grid grid-cols-1 md:grid-cols-3 gap-2 items-center px-4'>
+  <div>
+    
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-2 items-center px-4'>
 
         {
             ServicesList.map((item)=>{
@@ -19,6 +22,7 @@ const Services = () => {
         }
       
     </div>
+  </div>
   )
 }
 

@@ -11,10 +11,13 @@
 // export default Contact
 
 import React from "react";
+import Navbar from "./Navbar";
 
 const Contact = () => {
   return (
-    <div className="px-6 py-12 bg-[var(--color-background)]">
+    <div>
+      
+      <div className="px-6 py-12 bg-[var(--color-background)]">
 
       {/* HEADER */}
       <div className="text-center mb-10 animate-fade-in">
@@ -87,6 +90,7 @@ const Contact = () => {
         </div>
 
       </div>
+    </div>
     </div>
   );
 };

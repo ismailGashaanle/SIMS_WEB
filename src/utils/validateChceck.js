@@ -19,6 +19,10 @@ export const validate =(firstName,lastName,email,password,role,confirmpassword)=
         return "please fill firstName or lastName"
     }
 
+      if(confirmpassword !== password){
+     return "password is not matched !!"
+    }
+
     return null;
 }
 
@@ -30,6 +34,8 @@ export const validateLogin =(email,password)=>{
     if(!password){
         return "fill password required"
     }
+
+  
 
     return null;
 

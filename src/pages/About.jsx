@@ -12,9 +12,12 @@
 
 
 import React from "react";
+import Navbar from "./Navbar";
 
 const About = () => {
   return (
+   <div>
+     
     <div className="px-6 py-12 bg-[var(--color-background)]">
 
       {/* TITLE */}
@@ -80,6 +83,7 @@ const About = () => {
 
       </div>
     </div>
+   </div>
   );
 };
 

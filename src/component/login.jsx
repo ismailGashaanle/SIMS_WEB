@@ -6,6 +6,7 @@ import {validate,validateLogin} from '../utils/validateChceck'
 import { useDispatch, useSelector } from 'react-redux'
 import { addUser } from '../utils/UserSlice'
 import { useNavigate  } from "react-router-dom"
+import Navbar from '../pages/Navbar'
 const Login = () => {
   const navigate=useNavigate()
 
@@ -71,6 +72,14 @@ const Login = () => {
     },{withCredentials:true})
     console.log(res.data.message)
     dispatch(addUser(res?.data?.data))
+      if(res.data.data.role ==="admin"){
+      return    navigate("/adminDashbaord")
+      }
+      if(res.data.data.role === "user"){
+         return navigate("/userDashboard")
+      }
+
+        
  
  }catch(err){
    console.log(err.response?.data || err.message)
@@ -124,7 +133,9 @@ const Login = () => {
 
 
   return (
-    <div>
+  <div>
+    
+      <div>
       <div className='w-[96%] mx-auto flex justify-center items-center py-6'>
         
         <form  className='w-full md:w-6/12 bg-[var(--color-background)] px-4 py-2 flex flex-col gap-2  shadow-2xl'>
@@ -178,6 +189,7 @@ const Login = () => {
         </form>
       </div>
     </div>
+  </div>
   )
 }
 

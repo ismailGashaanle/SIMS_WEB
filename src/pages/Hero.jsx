@@ -1,7 +1,13 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { SomalilandCivilAhourityImage } from '../utils/constant'
+import { useSelector } from 'react-redux'
+import videoSlice from './../utils/VideoSlice';
 const Hero = () => {
+
+const  videoslice = useSelector((store)=>store.videoslice);
+      console.log("videoslice",videoslice)
+
   return (
     <div className='py-8 grid md:grid-cols-2 grid-cols-1 px-4 space-x-2 space-y-3'>
       
@@ -33,7 +39,7 @@ SOMALILAND IMMIGRATION MANAGEMENT SYSTEM
       <section>
            <iframe  
   className="w-full h-full rounded-lg"
-  src="https://www.youtube.com/embed/OJyFrU526Zo?autoplay=1&mute=1&loop=1&playlist=OJyFrU526Zo"
+  src={videoslice}
   title="video"
   frameBorder="0"
   allow="autoplay; encrypted-media"

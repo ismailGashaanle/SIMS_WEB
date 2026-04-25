@@ -13,10 +13,13 @@
 
 import React from "react";
 import { NavLink } from "react-router-dom";
+import Navbar from "./Navbar";
 
 const Footer = () => {
   return (
-    <footer className="bg-[var(--color-background)] border-t border-[var(--color-border)] mt-10">
+  <div>
+    
+      <footer className="bg-[var(--color-background)] border-t border-[var(--color-border)] mt-10">
 
       <div className="max-w-6xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
 
@@ -88,6 +91,7 @@ const Footer = () => {
       </div>
 
     </footer>
+  </div>
   );
 };
 
