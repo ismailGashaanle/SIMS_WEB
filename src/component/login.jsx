@@ -72,12 +72,7 @@ const Login = () => {
     },{withCredentials:true})
     console.log(res.data.message)
     dispatch(addUser(res?.data?.data))
-      if(res.data.data.role ==="admin"){
-      return    navigate("/adminDashbaord")
-      }
-      if(res.data.data.role === "user"){
-         return navigate("/userDashboard")
-      }
+       
 
         
  
