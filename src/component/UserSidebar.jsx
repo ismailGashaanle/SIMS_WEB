@@ -1,5 +1,5 @@
 import React from 'react'
-import Profile from './profile'
+import Profile from './Profile'
 import MyApplications from './user/MyApplications'
 import NewApplication from './user/NewApplication'
 import UploadDocument from './UploadDocument';
