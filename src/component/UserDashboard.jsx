@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { Outlet, useNavigate } from 'react-router-dom'
 import Header from './Header';
-import Profile from './profile';
+import Profile from './Profile';
 import NewApplication from './user/NewApplication';
 import UserSidebar from './UserSidebar';
  
@@ -18,6 +18,8 @@ const UserDash = () => {
          navigate("/")
          return
     }
+
+    
   console.log(user)
  useEffect(()=>{
 if(user===null){
