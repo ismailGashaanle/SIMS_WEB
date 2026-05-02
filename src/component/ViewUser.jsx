@@ -152,13 +152,13 @@ const ViewUser = () => {
 
                   <span
                     className={`px-3 py-1 text-xs rounded-full ${
-                      doc.status === "verfied"
+                      doc.status === "verified"
                         ? "bg-green-100 text-green-600"
                         : "bg-yellow-100 text-yellow-600"
                     }`}
                   >
                     {/* {doc.status} */}
-                   {doc.status === "verfied" ? "verified" : doc.status}
+                   {doc.status === "verified" ? "verified" : doc.status}
                   </span>
 
                 <div className="flex gap-2  md:w-4/12 w-full">

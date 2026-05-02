@@ -76,7 +76,7 @@
 // }, []);
 
 //   const getStatusColor = () => {
-//     if (application?.status === "verfied") return "bg-green-500";
+//     if (application?.status === "verified") return "bg-green-500";
 //     if (application?.status === "pending") return "bg-yellow-500";
 //     if (application?.status === "rejected") return "bg-red-500";
 //     return "bg-gray-400";
@@ -176,6 +176,7 @@ const UserDash = () => {
   const [application, setApplication] = useState(null);
   const [status, setStatus] = useState("loading");
   const [message, setMessage] = useState("");
+  const mystatusNow=useSelector((store)=>store?.Status)
 
   const navigate = useNavigate();
 
@@ -202,42 +203,46 @@ const UserDash = () => {
   const MytrackStatus = useTrackStatus(setStatus, setMessage);
 
   // ✅ load once
-  useEffect(() => {
-    getMyApplication();
-    MytrackStatus();
-  }, []);
+  // useEffect(() => {
+  //   getMyApplication();
+  //   MytrackStatus();
+  // }, []);
 
+   
+  useEffect(()=>{
+ MytrackStatus();
+  },[status])
   // ✅ refresh when tab focus
-  useEffect(() => {
-    const handleFocus = () => {
-      getMyApplication();
-      MytrackStatus();
-    };
+  // useEffect(() => {
+  //   const handleFocus = () => {
+  //     getMyApplication();
+  //     MytrackStatus();
+  //   };
 
-    window.addEventListener("focus", handleFocus);
+  //   window.addEventListener("focus", handleFocus);
 
-    return () => {
-      window.removeEventListener("focus", handleFocus);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("focus", handleFocus);
+  //   };
+  // }, []);
 
   // ✅ socket (ONLY ONE)
-  useEffect(() => {
-    const socket = io(BASE_URL_API);
+  // useEffect(() => {
+  //   const socket = io(BASE_URL_API);
 
-    socket.on("application-status-changed", () => {
-      getMyApplication();
-      MytrackStatus();
-    });
+  //   socket.on("application-status-changed", () => {
+  //     getMyApplication();
+  //     MytrackStatus();
+  //   });
 
-    return () => {
-      socket.disconnect();
-    };
-  }, []);
+  //   return () => {
+  //     socket.disconnect();
+  //   };
+  // }, []);
 
   // ✅ use correct status source
   const getStatusColor = () => {
-    if (status === "verfied") return "bg-green-500";
+    if (status === "verified") return "bg-green-500";
     if (status === "pending") return "bg-yellow-500";
     if (status === "rejected") return "bg-red-500";
     return "bg-gray-400";
@@ -268,7 +273,8 @@ const UserDash = () => {
         <span
           className={`px-4 py-2 text-white rounded-full ${getStatusColor()}`}
         >
-          {status}
+          {/* {status} */}
+          {mystatusNow}
         </span>
       </div>
 

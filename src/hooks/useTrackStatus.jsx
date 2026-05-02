@@ -1,9 +1,11 @@
 import axios from 'axios';
 import React, { useState } from 'react'
 import { BASE_URL_API } from '../utils/constant';
+import { useDispatch } from 'react-redux';
+import { addStatus } from '../utils/StatusSlice';
 
 const useTrackStatus = (setStatus, setMessage) => {
-    
+    const dispatch =useDispatch()
 
   const MytrackStatus = async () => {
     try {
@@ -13,6 +15,9 @@ const useTrackStatus = (setStatus, setMessage) => {
 
       setStatus(res.data.data);
       setMessage(res.data.message);
+      dispatch(addStatus(res?.data.data))
+       
+      
     } catch (err) {
       console.log(err);
       setStatus("error");

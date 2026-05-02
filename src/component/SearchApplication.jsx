@@ -117,7 +117,7 @@ console.log("data", passportNumber)
 
         <span
   className={`px-4 py-1 rounded-full text-white text-sm font-semibold ${
-    passportNumber?.status === "verfied"
+    passportNumber?.status === "verified"
       ? "bg-green-600"
       : passportNumber?.status === "pending"
       ? "bg-yellow-500"
@@ -127,7 +127,7 @@ console.log("data", passportNumber)
   }`}
 >
   {item?.status
-    ? item.status === "verfied"
+    ? item.status === "verified"
       ? "APPROVED"
       : passportNumber.status
     : "UNKNOWN"}

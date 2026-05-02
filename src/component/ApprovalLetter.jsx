@@ -68,7 +68,7 @@
 //   return <div className="text-center mt-20">Loading...</div>;
 // }
 
-// if (application.status !== "verfied") {
+// if (application.status !== "verified") {
 //   return (
 //     <div className="min-h-screen flex items-center justify-center bg-gray-100">
 //       <div className="bg-white p-8 rounded-xl shadow text-center">
@@ -232,7 +232,7 @@
 //   }
 
 //   // ❌ NOT APPROVED
-//   if (application.status !== "verfied") {
+//   if (application.status !== "verified") {
 //     return (
 //       <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
 //         <div className="bg-white p-8 rounded-xl shadow text-center">
@@ -407,7 +407,7 @@ const ApprovalLetter = () => {
   }
 
   // ❌ BLOCK IF NOT VERIFIED
-  if (status !== "verfied") {
+  if (status !== "verified") {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-100">
         <div className="bg-white p-8 rounded-xl shadow text-center">

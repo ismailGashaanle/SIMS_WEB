@@ -153,7 +153,7 @@ const Login = () => {
                  <label>role</label>
                  <select   ref={role} className='ring-1 ring-gray-300 py-3 rounded-md outline-[var(--secondary-Color)]'>
                     <option value="">choose role</option>
-                    <option value="admin">admin</option>
+                    {/* <option value="admin">admin</option> */}
                     <option value="user">user</option>
 
                  </select>

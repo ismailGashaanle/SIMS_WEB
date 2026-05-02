@@ -4,7 +4,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const StatusSlice = createSlice({
 
     name:"Status",
-    initialState:null,
+    initialState:"pending",
 
     reducers:{
         addStatus:(state,action)=>{

@@ -157,10 +157,10 @@
 //                 <td className="p-4">
 //   <span
 //     className={`text-sm w-10 p-2 rounded-lg text-white ${
-//       app.status === "verfied" ? "bg-green-600" : "bg-gray-500"
+//       app.status === "verified" ? "bg-green-600" : "bg-gray-500"
 //     }`}
 //   >
-//     {app.status === "verfied" ? "verified" :  app.status}
+//     {app.status === "verified" ? "verified" :  app.status}
     
 //   </span>
 // </td>
@@ -321,7 +321,7 @@ const AllApplicationAdmin = () => {
                     <td className="p-4">
                       <span
                         className={`text-sm w-10 p-2 rounded-lg text-white ${
-                          status === "verfied"
+                          status === "verified"
                             ? "bg-green-600"
                             : status === "pending"
                             ? "bg-yellow-500"
@@ -330,7 +330,7 @@ const AllApplicationAdmin = () => {
                             : "bg-gray-500"
                         }`}
                       >
-                        {status === "verfied" ? "verified" : status}
+                        {status === "verified" ? "verified" : status}
                       </span>
                     </td>
 
